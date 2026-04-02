@@ -1,0 +1,33 @@
+{
+  "name": "hw-libraries",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /hw-libraries/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SviatoslavFedosiuk/hw-libraries.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SviatoslavFedosiuk/hw-libraries/issues"
+  },
+  "homepage": "https://github.com/SviatoslavFedosiuk/hw-libraries#readme",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "@pnotify/core": "^5.2.0",
+    "@pnotify/mobile": "^5.2.0",
+    "chart.js": "^4.5.1",
+    "gh-pages": "^6.3.0"
+  }
+}
