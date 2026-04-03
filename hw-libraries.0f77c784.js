@@ -741,10 +741,15 @@ let currentKeyIndex = Math.floor(Math.random() * keys.length);
 keyEl.textContent = keys[currentKeyIndex];
 (0, _pnotifyJs.defaultModules).set(_pnotifyMobileJs, {});
 document.addEventListener("keydown", (event)=>{
-    if (event.key === keys[currentKeyIndex]) currentKeyIndex = (currentKeyIndex + 1) % keys.length;
-    else (0, _pnotifyJs.error)({
+    if (event.key === keys[currentKeyIndex]) {
+        currentKeyIndex = (currentKeyIndex + 1) % keys.length;
+        (0, _pnotifyJs.success)({
+            text: "Correct",
+            delay: 2000
+        });
+    } else (0, _pnotifyJs.error)({
         text: 'Not correct',
-        delay: 2000
+        delay: 2001
     });
 });
 document.addEventListener("keypress", (event)=>{
