@@ -32,7 +32,7 @@ document.addEventListener("keydown", (event) => {
     } else {
         error({
             text: 'Not correct',
-            delay: 2000,
+            delay: 2001,
         });
     }
 });
