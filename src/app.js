@@ -25,6 +25,10 @@ keyEl.textContent = keys[currentKeyIndex];
 document.addEventListener("keydown", (event) => {
     if (event.key === keys[currentKeyIndex]) {
         currentKeyIndex = (currentKeyIndex + 1) % keys.length;
+        success({
+          text: "Correct",
+          delay: 2000,
+        })
     } else {
         error({
             text: 'Not correct',
